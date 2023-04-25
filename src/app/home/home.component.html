@@ -1,0 +1,37 @@
+<ul>
+
+    <li *ngFor="let medi of medi">
+      <a><img src="{{medi.imageUrl}}" alt="">
+      <div class="content">
+         <div class="name">
+          {{medi.name}}
+        </div>
+        <span class="favorite">
+          ❤️
+        </span>
+
+<div class="product-item-footer">
+  <div class="origins">
+    <span *ngFor="let origin of medi.origins">
+{{origin}}
+    </span>
+  </div>
+  <div class="cook-time">
+    <span>🕒</span>
+    {{medi.cookTime}}
+  </div>
+</div>
+<div class="price">
+
+  <span>
+    {{medi.price|currency}}
+  </span>
+</div>
+       
+      </div>
+     
+      
+    </a>   
+
+    </li>
+</ul>
